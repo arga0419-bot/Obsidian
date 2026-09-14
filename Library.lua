@@ -2068,7 +2068,7 @@ function Library:AddDraggableButtonv2(Text: string, Func, ExcludeScaling: boolea
     table.insert(
         Library.Corners, 
         New("UICorner", {
-            CornerRadius = IsIcon and UDim.new(1, 0) or UDim.new(0, Library.CornerRadius),
+            CornerRadius = IsIcon and UDim.new(0, 0) or UDim.new(0, Library.CornerRadius),
             Parent = Button,
         })
     )

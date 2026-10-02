@@ -3202,21 +3202,6 @@ function Library.CreateWindow(config)
 					end
 				end)
 
-				MakeActionButton("Overwrite Config", function()
-					local name = configDropdown._selected
-					if not name then
-						Notify({ Title = "Config", Text = "Select a config to overwrite.", Icon = "x", Duration = 3 })
-						return
-					end
-					local data = CollectConfigData()
-					local ok = SaveConfig(folder, name, data)
-					if ok then
-						Notify({ Title = "Config", Text = "Overwritten \"" .. name .. "\".", Icon = "check", Duration = 3 })
-					else
-						Notify({ Title = "Config", Text = "Failed to overwrite.", Icon = "x", Duration = 3 })
-					end
-				end)
-
 				MakeActionButton("Delete Config", function()
 					local name = configDropdown._selected
 					if not name then
